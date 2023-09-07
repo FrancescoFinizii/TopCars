@@ -8,3 +8,22 @@
     <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
     <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+<br><br>
+
+## Installations / Instructions
+
+``` git  clone https://github.com/FrancescoFinizii/TopCars.git ```
+
+ Open `.env` file to configure your `database` and it's `name`, `host`, and `password` 
+
+``` composer install ```
+
+``` cp .env.example .env ```
+
+``` php artisan key:generate ```
+
+``` php artisan migrate --seed ```
+
+``` php artisan serve ```
+
+`localhost:8000`
