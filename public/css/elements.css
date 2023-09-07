@@ -1,0 +1,1312 @@
+/*
+    STRUCTURE elements.css
+
+
+    --ELEMENTS
+            |___Global
+            |___Button
+            |___Input
+            |___Select
+            |___TextArea
+            |___Link
+
+
+
+    --COMPONENTS
+            |___Navbar
+            |        |___MAIN navbar
+            |        |___FAQ navbar
+            |        |___Client navbar
+            |        |___Secondary navbar
+            |                   |___STAFF navbar
+            |                   |___ADMIN navbar
+            |
+            |___Footer
+            |
+            |___Pagination
+            |
+            |___Alert
+            |
+            |___Table
+            |
+            |___Image-item
+            |
+            |___Management FORM
+            |
+            |___Modal (delete.js)
+
+
+
+
+*/
+
+
+
+
+
+/*********************
+***                ***
+***    ELEMENTS    ***
+***                ***
+*********************/
+
+
+
+
+/*********************
+***                ***
+***     Global     ***
+***                ***
+*********************/
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+h1, h2, h3, th {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+
+li, summary {
+    list-style: none;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+p, label, td, .suffix  {
+    font-family: monospace;
+    font-size: 17px;
+}
+
+
+label {
+    color: whitesmoke;
+}
+
+
+.centered {
+    text-align: center;
+}
+
+
+/* DINAMIC Background */
+
+.background {
+    padding: 48px 8px;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: color;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+}
+
+
+.texture {
+    padding: 48px 8px;
+    background-blend-mode: color;
+    background-size: cover;
+    background-repeat:repeat ;
+    margin-bottom: 5px;
+}
+
+
+/* Item center with flex */
+
+.flex-centered {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Responsive flexbox */
+
+.cell-1of2 {
+    text-align: center;
+}
+
+
+@media (min-width: 880px) {
+
+    .row-flex {
+        text-align: start;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cell-1of2 {
+        flex: 0 0 46%;
+        margin: auto;
+    }
+
+}
+
+
+
+/******************
+***             ***
+***   Button    ***
+***             ***
+******************/
+
+
+button[disabled], button[disabled]:hover, button[disabled]:active, .disabled {
+    border-color: #222222;
+    background-color: darkgray;
+    box-shadow: none;
+}
+
+
+
+/*  --STRUCTURE--  */
+
+
+/*  Circle structure  */
+
+.btn {
+    display: inline-block;
+    padding: 10px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    border: 1px solid;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+
+/*  Rectangular structure  */
+
+.btn-rect {
+    cursor:pointer;
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 4px;
+}
+
+
+/*  large extension */
+
+.btn-large {
+    width: 100%;
+}
+
+
+
+/*  --Design--  */
+
+
+.btn-outline-dark {
+    color: #f5f6f8;
+    background-color: transparent;
+    background-image: none;
+    border-color: #f5f6f8;
+}
+
+.btn-outline-dark:hover {
+    color: gray;
+    border-color: #343a40;
+    box-shadow: 1px 1px 3px whitesmoke;
+}
+
+
+.btn-black {
+    color: #fff;
+    border-color: #222222;
+    background-color: #222222;
+}
+
+.btn-black:hover {
+    background-color: #111;
+    border-color: #111;
+}
+
+
+.btn-light {
+    color: #222222;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.btn-light:hover {
+    background-color:#d0d1d3;
+    box-shadow: 1px 1px 3px whitesmoke;
+}
+
+
+.btn-blue {
+    color: #fff;
+    border-color:#3763f4;
+    background-color: #3763f4;
+}
+
+.btn-blue:hover {
+    background-color:#2534a1;
+    border-color: #2c4fc3;
+}
+
+.btn-blue:active {
+    background-color: #02198b;
+    border-color: #294ab7;
+    box-shadow: 0px 0px 3px #6610f2;
+}
+
+
+.btn-red {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-red:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-red:active {
+    box-shadow: 0 0 3px #8e1e1d;
+    background-color: #bd2130;
+    border-color: #b21f2d;
+}
+
+
+.btn-cyan {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.btn-cyan:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.btn-cyan:active {
+    box-shadow: 0 0 3px 1px #2a707b;
+}
+
+
+.btn-green {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-green:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-green:active {
+    box-shadow: 0 0 3px 1px rgba(40,167,69,.5);
+}
+
+
+.btn-yellow {
+    color: #000;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-yellow:hover {
+    background-color: #ffca2c;
+    border-color: #ffc720;
+}
+
+.btn-yellow:active {
+    box-shadow: 0 0 3px 1px rgba(217,164,6,.5);
+}
+
+
+
+
+/******************
+***             ***
+***   Input     ***
+***             ***
+******************/
+
+
+input:not([type="radio"], [type="range"]) {
+    font-size: 16px;
+    line-height: 1.6;
+    width: 100%;
+    outline: none;
+}
+
+
+.input-dark-theme:-webkit-autofill, .input-dark-theme:-webkit-autofill:hover {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: whitesmoke;
+}
+
+
+.input-dark-theme {
+    border: none;
+    border-bottom: 1px solid rgb(143, 143, 143);
+    padding: 2px 6px;
+    background: transparent;
+    color: whitesmoke;
+    height: 35px;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px transparent;
+}
+
+
+.input-dark-theme:focus {
+    border-bottom: 3px solid whitesmoke;
+}
+
+
+.input-white-theme {
+    background: white;
+    min-width: 300px;
+    padding: 5px 24px;
+    border: 1px solid #ced4da;
+    border-radius: 16px;
+}
+
+
+.input-white-theme:focus {
+    box-shadow: 0 0 0 4px rgba(55, 99, 244, 0.25);
+}
+
+
+
+
+/******************
+***             ***
+***   Select    ***
+***             ***
+******************/
+
+
+select {
+    font-size: 16px;
+    line-height: 1.6;
+    height: 35px;
+    width: 100%;
+    outline: 0;
+}
+
+
+.select-dark-theme {
+    border: none;
+    border-bottom: solid rgb(143, 143, 143) 1px;
+    background: none;
+    color: whitesmoke;
+}
+
+
+.select-dark-theme:focus-visible {
+    border-bottom: 3px solid whitesmoke;
+}
+
+
+.select-dark-theme option {
+    color: #222222;
+}
+
+
+.select-white-theme {
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    min-width: 300px;
+}
+
+
+.select-white-theme:focus {
+    box-shadow: 0 0 0 4px rgba(55, 99, 244, 0.25);
+}
+
+
+
+
+/******************
+***             ***
+***  Textarea   ***
+***             ***
+******************/
+
+
+textarea {
+    font-size: 16px;
+    line-height: 1.6;
+    width: 100%;
+    min-width: 300px;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    outline: 0;
+    height: 200px;
+}
+
+
+textarea:focus {
+    box-shadow: 0 0 0 4px rgba(55, 99, 244, 0.25);
+}
+
+
+
+
+/******************
+***             ***
+***    Link     ***
+***             ***
+******************/
+
+
+a {
+    font-family: Arial;
+    text-decoration: none;
+}
+
+
+.btn-rect svg {
+    margin-right: 5px;
+}
+
+
+.errorLabel {
+    color: #ff4c4c;
+}
+
+
+.std-link {
+    color: cornflowerblue;
+    font-family: monospace;
+}
+
+
+.std-link:hover {
+    color: #3763f4;
+}
+
+
+
+
+
+/******************
+***             ***
+*** COMPONENTS  ***
+***             ***
+******************/
+
+
+
+
+/******************
+***             ***
+*** MAIN NavBar ***
+***             ***
+******************/
+
+
+.main-nav {
+    background-color: #222222;
+    padding: 16px 10px;
+    margin-bottom: 5px;
+}
+
+
+.nav-link {
+    color: whitesmoke;
+    padding: 14px 16px;
+    font-size: 1.1em;
+    font-weight: 550;
+}
+
+
+.nav-link:hover {
+    color: #ad2323;
+}
+
+
+.nav-link.active {
+    color: darkred;
+    font-weight: 620;
+}
+
+
+.main-nav-link-btn{
+    width: 200px;
+    text-align: end;
+}
+
+
+.main-nav-link-btn .btn-outline-dark {
+    margin-right: 6px;
+}
+
+
+.main-nav-link-btn .btn-light{
+    margin-left: 6px;
+}
+
+
+#navbar-toggler {
+    display: none;
+    background: transparent;
+    border: none;
+}
+
+
+@media (max-width: 880px) {
+
+    .main-nav-link, .main-nav-link-btn {
+        display: none;
+    }
+
+    #navbar-toggler {
+        color: whitesmoke;
+        display: block;
+        margin-top: 35px;
+        margin-right: 10px;
+        float: right;
+    }
+
+    .main-nav-link.responsive, .main-nav-link-btn.responsive {
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+
+    .main-nav-link ul {
+        display: block;
+    }
+
+    .main-nav, .main-nav-link.responsive a, .main-nav-link-btn.responsive a {
+        display: block;
+    }
+}
+
+
+
+
+/******************
+***             ***
+***  FAQ NavBar ***
+***             ***
+******************/
+
+
+.faq-navbar {
+    padding: 10px;
+    margin: 50px 0;
+}
+
+
+.faq-navbar ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 15px;
+}
+
+
+@media (max-width: 599px) {
+    .faq-navbar ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media (min-width: 600px) {
+    .faq-navbar ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 900px) {
+    .faq-navbar ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .faq-navbar ul {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+
+.faq-navbar p {
+    color: #222222;
+}
+
+
+.faq-navbar a:hover p {
+    font-weight: 900;
+}
+
+
+
+
+/********************
+***               ***
+*** Client NavBar ***
+***               ***
+********************/
+
+
+.client-navbar {
+    margin-top: 30px;
+}
+
+
+.client-navbar-link {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #adb5bd;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+
+.client-navbar-link svg {
+    margin-right: 10px;
+}
+
+
+.client-navbar-link:hover, .client-navbar-link.active  {
+    color: #222222;
+    background-color: whitesmoke;
+}
+
+
+
+
+/******************
+***             ***
+***  Secondary  ***
+***   NavBar    ***
+***             ***
+******************/
+
+
+.secondary-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+.secondary-navbar li {
+    width: 100%;
+    height: 100%;
+}
+
+
+.secondary-navbar a {
+    padding: 15px 0;
+    display: block;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 780;
+}
+
+
+
+
+/*******************
+***              ***
+*** Staff NavBar ***
+***              ***
+*******************/
+
+
+.staff-nav ul {
+    background: #7921b1;
+}
+
+
+.staff-nav-link {
+    color: white;
+}
+
+
+.staff-nav-link:hover {
+    background: #6c0ba9;
+}
+
+
+.staff-nav-link.active {
+    background: #51097e;
+}
+
+
+@media (max-width: 700px ) {
+    .staff-nav ul {
+        display: block;
+    }
+}
+
+
+
+
+/*******************
+***              ***
+*** Admin NavBar ***
+***              ***
+*******************/
+
+
+.admin-nav ul {
+    background: #2534a1;
+}
+
+
+.admin-nav-link {
+    color: white;
+}
+
+
+.admin-nav-link:hover {
+    background: #02198b;
+}
+
+
+.admin-nav-link.active {
+    background: #02136b;
+}
+
+
+@media (max-width: 700px ) {
+    .admin-nav ul {
+        display: block;
+    }
+}
+
+
+
+
+
+/******************
+***             ***
+***   Footer    ***
+***             ***
+******************/
+
+
+footer {
+    padding: 1.5rem 0;
+    text-align: center;
+    background: #222222;
+}
+
+
+footer p {
+    color: whitesmoke;
+}
+
+
+.github-icon-container {
+    display: inline-flex;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    color: #000;
+}
+
+
+
+
+/******************
+***             ***
+***  Pagination ***
+***             ***
+******************/
+
+
+.pager li {
+    margin: 10px 5px;
+}
+
+
+.my-active, .btn-cyan-disabled {
+    font-size: 16px;
+    font-family: Arial;
+}
+
+
+.my-active {
+    color: #fff;
+    background-color: #137282;
+    border-color: #10707f;
+}
+
+
+.btn-cyan-disabled {
+    color: white;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    opacity: .5;
+    cursor: default !important;
+}
+
+
+
+
+/******************
+***             ***
+***    Alert    ***
+***             ***
+******************/
+
+
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+
+
+/* Alert Design */
+
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+
+
+
+/******************
+***             ***
+***    Table    ***
+***             ***
+******************/
+
+
+table{
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+    overflow-x:hidden;
+
+}
+
+
+tr{
+    border-bottom:1px solid black;
+}
+
+
+td:not([class="action"]), th{
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding:12px 15px;
+    text-align: center;
+    font-size:16px;
+}
+
+
+tbody tr {
+    height: 80px;
+}
+
+
+th{
+    background-color: white;
+    padding: 5px 0;
+}
+
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+tr:nth-child(odd) {
+    background-color: #edeef1;
+}
+
+
+tbody tr:hover {
+    color: darkblue;
+    background-color: #ffffff;
+}
+
+
+.table-container {
+    display: inline-grid;
+    background: white;
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto 0;
+}
+
+
+.table-title {
+    position: relative;
+    background: black;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    overflow-x: auto;
+}
+
+
+.table-title h2 {
+    color: white;
+}
+
+
+.table-image-preview {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.action-cont {
+    min-width: 260px;
+}
+
+
+.action-cont button, .action-cont a {
+    margin: 0 5px;
+}
+
+
+
+
+/******************
+***             ***
+*** IMAGE item  ***
+***             ***
+******************/
+
+
+.image-item-container {
+    display: flex;
+    justify-content: center;
+    margin:  0;
+}
+
+
+.img-item-cont {
+    position: relative;
+    border-radius: 50%;
+    background-color: #111;
+}
+
+
+.img-item-cont input {
+    display: none;
+}
+
+
+.img-item-cont:hover .edit-item-cont {
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+.img-item-cont:hover .image-item {
+    opacity: .5;
+}
+
+
+.image-item {
+    border-radius: 100%;
+    box-shadow: 0 2px 6px 1px whitesmoke;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+}
+
+
+.edit-item-cont {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+}
+
+
+.edit-item-icon {
+    color: white;
+    padding-bottom: 8px;
+}
+
+
+.edit-item-text {
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 50%;
+    text-align: center;
+}
+
+
+
+
+/*********************
+***                ***
+***   MANAGEMENT   ***
+***      FORM      ***
+***                ***
+*********************/
+
+
+/*   section   */
+
+.management-section {
+    padding: 30px 5px;
+    background-position: center;
+    background-size: cover;
+}
+
+
+@media (min-width: 700px) {
+    .management-section {
+        min-height: 450px;
+    }
+}
+
+
+/*  FORM  */
+
+.form-container  {
+    padding: 10px;
+    margin: 40px auto;
+    max-width: 1200px;
+    background: whitesmoke;
+    border-radius: 15px;
+}
+
+
+.form-heading {
+    background: black;
+    padding: 20px 0;
+    color: whitesmoke;
+    position: relative;
+}
+
+
+.form-heading h1 {
+    margin: 0;
+}
+
+
+.form-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 0 20px 0;
+}
+
+
+.form-button button{
+    margin: 0 8px;
+}
+
+
+@media (min-width: 800px) {
+
+    .form-button {
+        justify-content:end;
+    }
+
+    .form-input {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .two-columns {
+        grid-column: span 2;
+    }
+}
+
+
+.form-input {
+    padding: 0 15px;
+    margin: 20px 0;
+    display: grid;
+    gap: 25px 15px;
+}
+
+
+.form-input label {
+    display: block;
+    color: black;
+    margin-bottom: 10px;
+}
+
+
+.form-input .input-item {
+    text-align: center;
+}
+
+
+.form-input .item-centered {
+    margin: auto 0;
+}
+
+
+.suffix {
+    margin: 0 5px;
+}
+
+
+.parent-left  {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    height: 38px;
+}
+
+
+.parent-left svg{
+    margin-right: 5px;
+    color: whitesmoke;
+}
+
+
+
+
+
+/*********************
+***                ***
+***     MODAL      ***
+***  single delete ***
+***   (delete.js)  ***
+***                ***
+*********************/
+
+
+.container {
+    padding: 16px;
+    text-align: center;
+}
+
+
+/* The Modal background */
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 50px;
+    background-color: rgb(0 0 0 / 85%);
+    background-blend-mode: color;
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border-radius: 10px;
+    width: 80%;
+}
+
+
+.modal-content p {
+    color: black;
+}
+
+
+/* The Modal Close Button (x) */
+
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover, .close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+
+.warning-container {
+    color: orange;
+}
+
+
+.delete-msg  {
+    white-space: normal !important;
+}
+
+/*
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+*/
+
+
+
+
+
+
+
