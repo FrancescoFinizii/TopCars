@@ -27,3 +27,25 @@
 ``` php artisan serve ```
 
 `localhost:8000`
+
+## Access Levels & Permissions
+
+The system distinguishes three types of users. Each user has different permissions. You can test each of the following levels using the following credentials:
+
+### Client:
+
+- **Username:** ``` clieclie ```
+
+- **Password:** ``` Qwerty123@ ```
+
+### Staff:
+
+- **Username:** ``` staffstaff ```
+
+- **Password:** ``` Qwerty123@ ```
+
+### Admin:
+
+- **Username:** ``` adminadmin ```
+
+- **Password:** ``` Qwerty123@ ```
