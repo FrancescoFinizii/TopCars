@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             'cognome' => 'cliente',
             'residenza' => 'ancona',
             'occupazione' => 'Studente',
-            'dataNascita' => date('Y-m-d', mktime(0, 0, 0, 1, 1, 1990)),
+            'dataNascita' => date('Y-m-d', mktime(0, 0, 0, 1, 1, 1995)),
             'foto' => 'storage/avatar.png',
         ]);
 
@@ -49,7 +49,7 @@ class DatabaseSeeder extends Seeder
             [
                 'id' => 1,
                 'username' => 'clieclie',
-                'password' => bcrypt('kw1heXWI'),
+                'password' => bcrypt('Qwerty123@'),
                 'utenteable_id' => 1,
                 'utenteable_type' => 'App\Models\Cliente',
                 'remember_token' => Str::random(10)
@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
             [
                 'id' => 2,
                 'username' => 'staffstaff',
-                'password' => bcrypt('kw1heXWI'),
+                'password' => bcrypt('Qwerty123@'),
                 'utenteable_id' => 1,
                 'utenteable_type' => 'App\Models\Staff',
                 'remember_token' => Str::random(10)
@@ -69,7 +69,7 @@ class DatabaseSeeder extends Seeder
             [
                 'id' => 3,
                 'username' => 'adminadmin',
-                'password' => bcrypt('kw1heXWI'),
+                'password' => bcrypt('Qwerty123@'),
                 'utenteable_id' => null,
                 'utenteable_type' => "Admin",
                 'remember_token' => Str::random(10)
@@ -88,28 +88,33 @@ class DatabaseSeeder extends Seeder
         DB::table("faq")->insert([
             [
                 "tipologia" => "Prenotazione veicolo",
-                "domanda" => "Come posso prenotare il auto?",
-                "risposta" => "TopCars ti consente di verificare H24 7/7 la disponibilità dei nostri veicoli e prenotare il tuo viaggio, con la possibilità di pagare il auto direttamente online oppure in ufficio al momento del ritiro."
+                "domanda" => "Come posso prenotare un veicolo?",
+                "risposta" => "TopCars ti consente di verificare H24 7/7 la disponibilità dei veicoli e prenotare il tuo viaggio. Nella sezione 'Catalogo' del sito è possibile ricercare le vetture disponibili e selezionare quella di interesse. Solamente gli utenti registrati non in possesso di alcuna prenotazione possono effettuare il noleggio."
+            ],
+            [
+                "tipologia" => "Prenotazione veicolo",
+                "domanda" => "Come posso disdire la mia prenotazione?",
+                "risposta" => "La disdetta non è possibile tramite piattaforma web. Per disdire una prenotazione occorre contattare il nostro Servizio Clienti. La cancellazione comporta una sanzione variabile da pagare la quale le verrà comunicata telefonicamente dai nostri operatori"
             ],
             [
                 "tipologia" => "Requisiti noleggio",
                 "domanda" => "Quali sono i limiti di età previsti per noleggiare un veicolo?",
-                "risposta" => "Tutti i conducenti autorizzati dovranno avere un’età superiore ai 19 anni compiuti."
+                "risposta" => "Tutti i conducenti autorizzati dovranno avere un’età minima di 19 anni e non superiore ai 75 anni."
             ],
             [
                 "tipologia" => "Responsabilità e coperture",
-                "domanda" => "Quali coperture coprono le vetture a auto?",
+                "domanda" => "Quali coperture coprono le vetture a noleggio?",
                 "risposta" => "Tutti i nostri veicoli sono coperti da copertura R.C. a norma delle vigenti leggi, la quale garantisce la copertura della Responsabilità Civile nei confronti di terzi. Anche i trasportati sono coperti dalla copertura R.C."
             ],
             [
                 "tipologia" => "Carta e pagamenti",
-                "domanda" => "Come posso pagare il auto?",
-                "risposta" => "Il auto può essere pagato online sulla piattaforma oppure direttamente nel nostro ufficio prima del ritiro del veicolo."
+                "domanda" => "Come posso pagare il noleggio?",
+                "risposta" => "Il noleggio deve essere pagato al momento del ritiro prima del ritiro del veicolo."
             ],
             [
                 "tipologia" => "Ritiro del veicolo",
                 "domanda" => "Dove devo ritirare il mio veicolo?",
-                "risposta" => "TopCars permette di scegliere il punto di ritiro dell'autovettura direttamente durante la fase di prenotazione. Una volta effettuato il auto basta recarsi all'orario indicato nel punto di ritiro dove il personale adetto la attende per consegnarle il veicolo."
+                "risposta" => "TopCars permette di scegliere il punto di ritiro dell'autovettura direttamente durante la fase di prenotazione. Una volta effettuato il noleggio basta recarsi all'orario indicato nel punto di ritiro dove il personale adetto la attende per consegnarle il veicolo."
             ],
             [
                 "tipologia" => "Durante il noleggio",
@@ -118,7 +123,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 "tipologia" => "Riconsegna del veicolo",
-                "domanda" => "Come faccio ad avere la fattura del mio auto?",
+                "domanda" => "Come faccio ad avere la fattura del mio noleggio?",
                 "risposta" => "La copia di cortesia della tua fattura ti sarà rilasciata direttamente dai nostri operatori al momento della riconsegna del veicolo. In caso di mancata consegna della fattura, contatta pure il nostro Servizio Clienti."
             ],
             [
@@ -127,6 +132,7 @@ class DatabaseSeeder extends Seeder
                 "risposta" => "In questo caso dovrai contattare direttamente l'amministratore. Non preocupparti TopCars ti mette a disposizione un apposito canale di comunicazione presente nella tua area personale. La tua richiesta sarà analizzata e ti verrà dato un riscontro nel tempo più breve possibile."
             ]
         ]);
+
 
         DB::table('auto')->insert([
             [

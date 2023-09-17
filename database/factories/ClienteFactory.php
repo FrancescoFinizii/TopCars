@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,13 +17,16 @@ class ClienteFactory extends Factory
      */
     public function definition()
     {
+
+        $dataNascita = $this->faker->dateTimeBetween("-70 years", "-19 years");
+
         return [
             'id' => $this->faker->unique()->numberBetween(3, 5000),
             'nome' => $this->faker->firstName(),
             'cognome' => $this->faker->lastName(),
             'residenza' => $this->faker->state(),
-            'occupazione' => $this->faker->randomElement(['Non specificato', 'Dipendente', 'Libero professionista', 'Studente', 'Disoccupato']),
-            'dataNascita' => $this->faker->date("Y-m-d", "-18 years"),
+            'occupazione' => date_diff(Carbon::now(), $dataNascita)->y <= 25 ? "Studente" : $this->faker->randomElement(['Non specificato', 'Dipendente', 'Libero professionista', 'Disoccupato']),
+            'dataNascita' => $dataNascita->format("Y-m-d"),
             'foto' => "storage/avatar.png",
         ];
     }

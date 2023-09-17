@@ -1,4 +1,3 @@
-
 @extends("admin.layout.admin-layout")
 @section("title", "Statistiche")
 @section("content")

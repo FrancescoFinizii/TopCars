@@ -4,7 +4,6 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\NoleggioController;
 use App\Http\Controllers\AutoController;
-use App\Http\Controllers\PdfController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\UtenteController;
 use Illuminate\Support\Facades\Route;
@@ -26,15 +25,13 @@ use Illuminate\Support\Facades\Route;
 ---        All Public Routes List        ---
 ---                                      ---
 --------------------------------------------*/
-Route::get("prova", [NoleggioController::class, "prova"]);
 
-
-Route::redirect('/', "/home");
-
-Route::view('home', "public/home")
+Route::view('/', "public/home")
     ->name('home');
 
-Route::get('/relazione',[PdfController::class, "showRelazione"])
+Route::get('/relazione', function () {
+    return response()->file(public_path('relazione.pdf'),['content-type'=>'application/pdf']);
+})
     ->name("relazione");
 
 Route::get("/catalogo", [AutoController::class, "search"])

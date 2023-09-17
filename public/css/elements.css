@@ -9,6 +9,7 @@
             |___Select
             |___TextArea
             |___Link
+            |___Label
 
 
 
@@ -89,11 +90,6 @@ p, label, td, .suffix  {
 }
 
 
-label {
-    color: whitesmoke;
-}
-
-
 .centered {
     text-align: center;
 }
@@ -120,7 +116,7 @@ label {
 }
 
 
-/* Item center with flex */
+/* Flex container */
 
 .flex-centered {
     display: flex !important;
@@ -271,7 +267,7 @@ button[disabled], button[disabled]:hover, button[disabled]:active, .disabled {
 .btn-blue:active {
     background-color: #02198b;
     border-color: #294ab7;
-    box-shadow: 0px 0px 3px #6610f2;
+    box-shadow: 0 0 3px #6610f2;
 }
 
 
@@ -486,16 +482,6 @@ a {
 }
 
 
-.btn-rect svg {
-    margin-right: 5px;
-}
-
-
-.errorLabel {
-    color: #ff4c4c;
-}
-
-
 .std-link {
     color: cornflowerblue;
     font-family: monospace;
@@ -506,6 +492,24 @@ a {
     color: #3763f4;
 }
 
+
+
+
+/******************
+***             ***
+***   Label     ***
+***             ***
+******************/
+
+
+label {
+    color: whitesmoke;
+}
+
+
+.errorLabel {
+    color: #ff4c4c;
+}
 
 
 
@@ -1116,6 +1120,11 @@ tbody tr:hover {
     padding: 30px 5px;
     background-position: center;
     background-size: cover;
+}
+
+
+.management-section .btn-rect svg {
+    margin-right: 5px;
 }
 
 

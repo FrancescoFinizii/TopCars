@@ -150,10 +150,10 @@
             <section class="default-section dark-section">
                 <h1>Accesso ai servizi</h1>
                 <p>
-                    La piattaforma non impone alcuna restrizione riguardo la consultazione delle offerte. Il noleggio è
-                    consentito solamente agli utenti che dispongono di un account TopCars. Nel caso in cui non si
-                    dispone di un
-                    account è possibile crearne uno in modo totalmente gratuito al seguente
+                    La piattaforma non impone restrizioni riguardo la consultazione delle offerte. Il noleggio è
+                    consentito solamente agli utenti registrati. La registrazione è riservata alle persone in possesso di
+                    patente B e di età compresa tra i 19 e i 75 anni. Nel caso in cui non si
+                    dispone di un account è possibile crearne uno in modo totalmente gratuito al seguente
                     <a href="{{route("register")}}" class="std-link">indirizzo</a>. Per maggiori informazioni è possibile visione le
                     FAQ al seguente <a href="{{route('faq')}}" class="std-link">link</a>. Una volta autenticati gli
                     utenti

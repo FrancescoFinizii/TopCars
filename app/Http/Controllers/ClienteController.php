@@ -48,7 +48,7 @@ class ClienteController extends Controller
             'cognome' => 'required|alpha:ascii|max:30',
             'residenza' => 'required|alpha:ascii|max:50',
             'occupazione' => ['required', Rule::in(['Non specificato', 'Dipendente', 'Libero professionista', 'Studente', 'Disoccupato'])],
-            'dataNascita' => 'required|date|before: -18 years',
+            'dataNascita' => 'required|date|before: -19 years|after: -75 years|size:10',
             'username' => 'required|alpha_dash|min:8|max:30|unique:utente,username',
             'password' => ['required', 'confirmed', Password::min(8)->mixedCase()->numbers()],
             'password_confirmation' => 'required',
@@ -102,7 +102,7 @@ class ClienteController extends Controller
             'username' => ['required', 'alpha_dash', 'min:8', 'max:30', Rule::unique("utente", "username")->ignore(Auth::user())],
             'residenza' => 'required|alpha:ascii|max:50',
             'occupazione' => ['required', Rule::in(['Non specificato', 'Dipendente', 'Libero professionista', 'Studente', 'Disoccupato'])],
-            'dataNascita' => 'required|date|before: -18 years',
+            'dataNascita' => 'required|date|before: -19 years|after: -75 years|size:10',
         ]);
         Auth::user()->update($request->only("username"));
         Auth::user()->utenteable->update($request->except("username"));

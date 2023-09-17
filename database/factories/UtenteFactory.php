@@ -2,8 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Staff;
-use App\Models\Utente;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -22,7 +20,7 @@ class UtenteFactory extends Factory
         return [
             'id' => $this->faker->unique()->numberBetween(3, 5000),
             'username' => $this->faker->unique()->userName(),
-            'password' => 'kw1heXWI',
+            'password' => 'Qwerty123@',
             'remember_token' => Str::random(10),
         ];
     }

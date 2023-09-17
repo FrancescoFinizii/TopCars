@@ -44,7 +44,7 @@ class FAQController extends Controller
 
 
     /**
-     * Mostra la pagina publica con tutte le FAQ
+     * Mostra la pagina pubblica con tutte le FAQ
      */
     public function show()
     {
