@@ -14,13 +14,15 @@
 
 ``` git  clone https://github.com/FrancescoFinizii/TopCars.git ```
 
- Open `.env` file to configure your `database` and it's `name`, `host`, and `password` 
+ Open `.env.example` file to configure your `database` and it's `name`, `host`, and `password` 
 
 ``` composer install ```
 
 ``` cp .env.example .env ```
 
 ``` php artisan key:generate ```
+
+``` php artisan storage:link ```
 
 ``` php artisan migrate --seed ```
 
@@ -30,7 +32,7 @@
 
 ## Access Levels & Permissions
 
-The system distinguishes three types of users. Each user has different permissions. You can test each of the following levels using the following credentials:
+The system distinguishes three types of users. Each user has different permissions. You can test the web application using the following credentials:
 
 ### Client:
 
