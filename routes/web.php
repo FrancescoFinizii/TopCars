@@ -94,25 +94,6 @@ Route::middleware("can:isClient")->prefix('client')->group(function () {
 
 /*------------------------------------------
 ---                                      ---
----        All Staff Routes List         ---
----                                      ---
---------------------------------------------*/
-
-Route::middleware("can:isStaff")->prefix("management")->group(function () {
-
-    Route::get('/noleggio/all', [NoleggioController::class, "showNoleggiFromYear"])
-        ->name("noleggio.year");
-
-    Route::post('/noleggio', [NoleggioController::class, "showNoleggiFromMonth"])
-        ->name("noleggio.month");
-
-});
-
-
-
-
-/*------------------------------------------
----                                      ---
 ---    All Staff & Admin Routes List     ---
 ---                                      ---
 --------------------------------------------*/
@@ -120,6 +101,12 @@ Route::middleware("can:isStaff")->prefix("management")->group(function () {
 Route::middleware("can:isStaffOrAdmin")->prefix("management")->group(function () {
 
     Route::resource('auto', AutoController::class)->except("show");
+
+    Route::get('/noleggio/all', [NoleggioController::class, "showNoleggiFromYear"])
+        ->name("noleggio.year");
+
+    Route::post('/noleggio', [NoleggioController::class, "showNoleggiFromMonth"])
+        ->name("noleggio.month");
 
 });
 

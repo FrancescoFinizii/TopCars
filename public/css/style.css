@@ -926,7 +926,6 @@ input[type="range"]::-moz-range-thumb{
 /*  ONLY cliente-edit-password.blade.php  */
 
 #password-btn-container {
-    margin-top: 20px;
     text-align: center;
 }
 

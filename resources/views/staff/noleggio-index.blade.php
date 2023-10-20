@@ -1,4 +1,4 @@
-@extends("staff.layout.staff-layout")
+@extends(Auth::user()->utenteable_type == "Admin" ? "admin.layout.admin-layout" : "staff.layout.staff-layout")
 @section("title", "Noleggio - Statistiche")
 @section("content")
     @if ($errors->any())

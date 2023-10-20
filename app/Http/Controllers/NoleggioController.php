@@ -94,7 +94,7 @@ class NoleggioController extends Controller
         ]);
 
         if ($request->mese == 0) {
-            $noleggi = Noleggio::all();
+            $this->showNoleggiFromYear();
         }
         else {
             $noleggi = $this->getNoleggiFromMonth($request->mese);

@@ -119,14 +119,9 @@ window.addEventListener('load', function() {
 
 
 // function to get next weekday
-function getNextWeekDay(day) {
+function getNextDay(day) {
     let newDay = new Date(day.getTime());
-
-    do {
-        //getDate() = return number of day ->  Sun = 0, Mon = 1, Tue = 2, ..., Fri = 5
-        newDay.setDate( newDay.getDate() + 1);
-    }
-    while (1 >= newDay.getDay() && newDay.getDay() >= 5);
+    newDay.setDate( newDay.getDate() + 1);
     return newDay;
 }
 
@@ -158,16 +153,24 @@ function addYear(date, year) {
 }
 
 
-window.addEventListener('load', function () {
+$(window).on('load', function () {
     let today = new Date();
-    let nextWeekDay = getNextWeekDay(today);
-    $('#dataRitiro').attr("min", dateToString(nextWeekDay));
-    let OneYearAfterNextWeekDay = addYear(nextWeekDay, 1);
-    $('#dataRitiro').attr("max", dateToString(OneYearAfterNextWeekDay));
-    let nextNextWeekDay = getNextWeekDay(nextWeekDay);
-    $('#dataConsegna').attr("min", dateToString(nextNextWeekDay));
-    let ThreeYearAfterNextNextWeekDay = addYear(nextNextWeekDay, 3);
-    $('#dataConsegna').attr("max", dateToString(ThreeYearAfterNextNextWeekDay));
+    let nextDay = getNextDay(today);
+    $('#dataRitiro').attr("min", dateToString(nextDay));
+    let OneYearAfterToday = addYear(today, 1);
+    $('#dataRitiro').attr("max", dateToString(OneYearAfterToday));
+    let nextNextDay = getNextDay(nextDay);
+    $('#dataConsegna').attr("min", dateToString(nextNextDay));
+    let ThreeYearAfterToday = addYear(today, 3);
+    $('#dataConsegna').attr("max", dateToString(ThreeYearAfterToday));
+
+    $('#dataRitiro').on("change", function () {
+        let nextDay = getNextDay(new Date($('#dataRitiro').val()));
+        $('#dataConsegna').attr("min", dateToString(nextDay));
+        let dataConsegna = new Date($('#dataConsegna').val());
+        if (nextDay > dataConsegna)
+            $('#dataConsegna').val(dateToString(nextDay));
+    });
 });
 
 

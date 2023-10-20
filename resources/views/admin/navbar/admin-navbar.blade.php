@@ -13,6 +13,9 @@
             <a href="{{route("faq.index")}}" class="admin-nav-link" data-title="FAQ - Gestione">Gestione FAQ</a>
         </li>
         <li>
+            <a href="{{route("noleggio.year")}}" class="admin-nav-link" data-title="Noleggio - Statistiche">Noleggi</a>
+        </li>
+        <li>
             <a href="{{route("statistiche")}}" class="admin-nav-link" data-title="Statistiche">Statistiche</a>
         </li>
     </ul>
