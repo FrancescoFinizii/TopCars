@@ -10,6 +10,9 @@
 </p>
 <br><br>
 
+> **Note**
+> PHP 8.1 is required.
+
 ## Installations / Instructions
 
 ``` git  clone https://github.com/FrancescoFinizii/TopCars.git ```

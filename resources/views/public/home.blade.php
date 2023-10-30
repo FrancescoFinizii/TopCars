@@ -118,7 +118,7 @@
             <div class="cell-1of2">
                 <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.948982877482!2d13.514020176111124!3d43.586778971105275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d80233dd931ef%3A0x161719e4f3f5daaf!2sUniversit%C3%A0%20Politecnica%20delle%20Marche%20-%20Facolt%C3%A0%20di%20Ingegneria!5e0!3m2!1sit!2sit!4v1689648158000!5m2!1sit!2sit"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
