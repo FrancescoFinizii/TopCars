@@ -16,7 +16,7 @@
             {{ Form::password('password', ["class" => "input-dark-theme"]) }}
         </div>
         <div class="cell-1of2">
-            {{Form::label("password_confirmation", "Conferma nuovapassword:")}}
+            {{Form::label("password_confirmation", "Conferma nuova password:")}}
             {{ Form::password('password_confirmation', ["class" => "input-dark-theme"]) }}
         </div>
     </div>
