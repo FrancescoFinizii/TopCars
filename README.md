@@ -23,7 +23,7 @@
 
 ``` php artisan key:generate ```
 
-Open `.env` file to configure your `database` and it's `name`, `host`, and `password`
+Open `.env` file to configure your `database` and its `name`, `host`, and `password`
 
 ``` php artisan storage:link ```
 
